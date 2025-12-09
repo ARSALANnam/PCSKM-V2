@@ -18,8 +18,7 @@ Unlike standard compressors, this tool **automatically finds the optimal number 
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/smart-kmeans-compressor.git](https://github.com/YOUR_USERNAME/smart-kmeans-compressor.git)
-    cd smart-kmeans-compressor
+    git clone [https://github.com/ARSALANnam/PCSKM-V2.git](https://github.com/ARSALANnam/PCSKM-V2.git)
     ```
 
 2.  Install the required dependencies:
@@ -43,16 +42,16 @@ Unlike standard compressors, this tool **automatically finds the optimal number 
 3.  Run the script:
 
     ```bash
-    python main.py
+    python PCSKM.py
     ```
 
-4.  The script will output the logs in the console and save the result as `compressed_smart.jpg`.
+4.  The script will output the logs in the console and save the result as `compressed++.jpg`.
 
 ## 🧠 How It Works ( The Logic)
 
 The core of this project is the `find_optimal_k` algorithm. Instead of guessing a fixed `k` (e.g., k=64), the script performs an iterative search:
 
-1.  **Candidates:** It tests a range of `k` values: `[4, 8, 12, 16, 24, 32, 48, 64]`.
+1.  **Candidates:** It tests a range of `k` values: `[4, 8, 12, 16, 24, 32, 48, 64, 128]`.
 2.  **Fast Evaluation:** Uses a lightweight K-Means initialization (`n_init=3`) for rapid testing.
 3.  **SSIM Calculation:** For each `k`, it reconstructs the image and calculates the SSIM score against the original.
 4.  **Decision Making:**
