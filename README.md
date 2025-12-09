@@ -40,7 +40,7 @@ Unlike standard compressors, this tool **automatically finds the optimal number 
 The core of this project is the `find_optimal_k` algorithm. Instead of guessing a fixed `k` (e.g., k=64), the script performs an iterative search:
 
 1.  **Candidates:** It tests a range of `k` values: `[4, 8, 12, 16, 24, 32, 48, 64, 128]`.
-2.  **Fast Evaluation:** Uses a lightweight K-Means initialization (`n_init=3`) for rapid testing.
+2.  **Fast Evaluation:** Uses a lightweight K-Means initialization (`n_init=5`) for rapid testing.
 3.  **SSIM Calculation:** For each `k`, it reconstructs the image and calculates the SSIM score against the original.
 4.  **Decision Making:**
     * **Target Reached:** If `SSIM >= 0.92` (configurable), it stops and selects that `k`.
