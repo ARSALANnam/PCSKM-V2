@@ -35,18 +35,6 @@ Unlike standard compressors, this tool **automatically finds the optimal number 
 * Scikit-Learn (`scikit-learn`)
 * Scikit-Image (`scikit-image`)
 
-## 💻 Usage
-
-1.  Place your target image in the project folder (e.g., named `test.jpeg`).
-2.  Open the script and ensure the image path matches your file.
-3.  Run the script:
-
-    ```bash
-    python PCSKM.py
-    ```
-
-4.  The script will output the logs in the console and save the result as `compressed++.jpg`.
-
 ## 🧠 How It Works ( The Logic)
 
 The core of this project is the `find_optimal_k` algorithm. Instead of guessing a fixed `k` (e.g., k=64), the script performs an iterative search:
